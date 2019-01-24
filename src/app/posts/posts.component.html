@@ -1,5 +1,18 @@
-<ul>
-  <li *ngFor="let post of posts">
-    {{ post.title }}
-  </li>
-</ul>
+<table>
+  <thead>
+      <tr>
+        <td>Id</td>
+        <td>UserId</td>
+        <td>Title</td>
+        <td>Body</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts">
+        <td>{{ post.id }}</td>
+        <td>{{ post.userId }}</td>
+        <td><a routerLink="/detail/{{post.id}}">{{ post.title }}</a></td>
+        <td>{{ post.body }}</td>
+      </tr>
+    </tbody>
+</table>
